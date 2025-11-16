@@ -38,7 +38,7 @@ npm start
 
 Mục **LaunchPage**: Chứa cấu hình UI của Launchpad (groups và tiles). Mỗi tile đại diện cho một app, targetURL có dạng:
 
-#<semanticObject>-<action>
+#**semanticObject**-**action**
 
 Mục **ClientSideTargetResolution**: Chứa chi tiết của từng app.
 **semanticObject** phải khớp với id của app (xem trong manifest.json của app).
