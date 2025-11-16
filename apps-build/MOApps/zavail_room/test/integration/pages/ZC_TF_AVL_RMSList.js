@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zavailroom",componentId:"ZC_TF_AVL_RMSList",contextPath:"/ZC_TF_AVL_RMS/Set"},e)});
+//# sourceMappingURL=ZC_TF_AVL_RMSList.js.map

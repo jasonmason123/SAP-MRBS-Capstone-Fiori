@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zschedulemanagement",componentId:"ZMRBS_C_SCH_OMList",contextPath:"/ZMRBS_C_SCH_OM"},e)});
+//# sourceMappingURL=ZMRBS_C_SCH_OMList.js.map

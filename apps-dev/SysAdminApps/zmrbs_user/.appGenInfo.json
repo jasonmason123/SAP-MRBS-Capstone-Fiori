@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Oct 29 2025 15:21:45 GMT+0700 (Indochina Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://s35.gb.ucc.cit.tum.de/sap/opu/odata4/sap/zmrbs_ui_o4_user/srvd/sap/zmrbs_ui_user/0001/",
+    "appName": "zmrbs_user",
+    "appTitle": "User Management",
+    "appDescription": "Fiori List Report for User Management",
+    "appNamespace": "zdev.s35",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.108.33",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.5",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "User"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "_UserRole"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zinvitation",componentId:"ZR_INVTObjectPage",contextPath:"/ZR_INVT"},e)});
+//# sourceMappingURL=ZR_INVTObjectPage.js.map

@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zschedulemanagement/test/integration/FirstJourney","zschedulemanagement/test/integration/pages/ZMRBS_C_SCH_OMList","zschedulemanagement/test/integration/pages/ZMRBS_C_SCH_OMObjectPage"],function(e,t,n,a){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zschedulemanagement")+"/index.html"});e.run({pages:{onTheZMRBS_C_SCH_OMList:n,onTheZMRBS_C_SCH_OMObjectPage:a}},t.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

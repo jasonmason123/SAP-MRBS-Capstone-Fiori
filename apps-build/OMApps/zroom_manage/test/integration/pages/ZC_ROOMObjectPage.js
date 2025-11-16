@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zroommanage",componentId:"ZC_ROOMObjectPage",contextPath:"/ZC_ROOM"},t)});
+//# sourceMappingURL=ZC_ROOMObjectPage.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zschedulemanagement",componentId:"ZMRBS_C_SCH_OMObjectPage",contextPath:"/ZMRBS_C_SCH_OM"},t)});
+//# sourceMappingURL=ZMRBS_C_SCH_OMObjectPage.js.map

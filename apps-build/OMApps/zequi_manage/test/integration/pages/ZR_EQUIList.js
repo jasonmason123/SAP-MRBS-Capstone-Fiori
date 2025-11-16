@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zequimanage",componentId:"ZR_EQUIList",contextPath:"/ZR_EQUI"},e)});
+//# sourceMappingURL=ZR_EQUIList.js.map

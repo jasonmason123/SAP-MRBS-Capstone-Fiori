@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zsysvarmanagement",componentId:"ZR_SYSVARObjectPage",contextPath:"/ZR_SYSVAR"},t)});
+//# sourceMappingURL=ZR_SYSVARObjectPage.js.map

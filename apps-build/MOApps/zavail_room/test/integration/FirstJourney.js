@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/test/opaQunit"],function(e){"use strict";var i={run:function(){QUnit.module("First journey");e("Start application",function(e,i,t){e.iStartMyApp();t.onTheZC_TF_AVL_RMSList.iSeeThisPage()});e("Navigate to ObjectPage",function(e,i,t){i.onTheZC_TF_AVL_RMSList.onFilterBar().iExecuteSearch();t.onTheZC_TF_AVL_RMSList.onTable().iCheckRows();i.onTheZC_TF_AVL_RMSList.onTable().iPressRow(0);t.onTheZC_TF_AVL_RMSObjectPage.iSeeThisPage()});e("Teardown",function(e,i,t){e.iTearDownMyApp()})}};return i});
+//# sourceMappingURL=FirstJourney.js.map

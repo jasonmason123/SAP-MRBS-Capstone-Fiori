@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var s={actions:{},assertions:{}};return new e({appId:"zmrbsuser",componentId:"UserRoleObjectPage",contextPath:"/User/_UserRole"},s)});
+//# sourceMappingURL=UserRoleObjectPage.js.map

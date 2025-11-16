@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","zrmequimanage/test/integration/pages/ZR_RMEQUIList","zrmequimanage/test/integration/pages/ZR_RMEQUIObjectPage"],function(e,t,a){"use strict";var n=new e({launchUrl:sap.ui.require.toUrl("zrmequimanage")+"/test/flp.html#app-preview",pages:{onTheZR_RMEQUIList:t,onTheZR_RMEQUIObjectPage:a},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Fri Nov 07 2025 11:35:03 GMT+0700 (Indochina Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://s35.gb.ucc.cit.tum.de/sap/opu/odata4/sap/zmrbs_ui_o4_room/srvd/sap/zmrbs_ui_room/0001/",
+    "appName": "zroom_manage",
+    "appTitle": "Meeting rooms management",
+    "appDescription": "Meeting rooms management",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.108.33",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZC_ROOM"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "None"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

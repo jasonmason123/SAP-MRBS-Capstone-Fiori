@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","zroommanage/test/integration/pages/ZC_ROOMList","zroommanage/test/integration/pages/ZC_ROOMObjectPage"],function(e,t,a){"use strict";var n=new e({launchUrl:sap.ui.require.toUrl("zroommanage")+"/test/flp.html#app-preview",pages:{onTheZC_ROOMList:t,onTheZC_ROOMObjectPage:a},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

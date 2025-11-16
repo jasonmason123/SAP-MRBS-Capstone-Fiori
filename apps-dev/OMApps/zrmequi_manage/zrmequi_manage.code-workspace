@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "zrole_manage",
+			"path": "../zrole_manage"
+		}
+	],
+	"settings": {}
+}

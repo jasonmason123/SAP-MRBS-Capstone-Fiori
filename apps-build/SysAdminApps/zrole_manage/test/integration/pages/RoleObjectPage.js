@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zrolemanage",componentId:"RoleObjectPage",contextPath:"/Role"},t)});
+//# sourceMappingURL=RoleObjectPage.js.map

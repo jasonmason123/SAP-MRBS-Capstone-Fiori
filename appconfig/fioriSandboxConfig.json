@@ -1,0 +1,290 @@
+{
+  "defaultRenderer": "fiori2",
+  "bootstrapPlugins": {
+    "RuntimeAuthoringPlugin": {
+      "component": "sap.ushell.plugins.rta",
+      "config": { "validateAppVersion": false }
+    }
+  },
+  "renderers": {
+    "fiori2": {
+      "componentData": {
+        "config": {
+          "enableSearch": false,
+          "rootIntent": "Shell-home"
+        }
+      }
+    }
+  },
+  "services": {
+    "LaunchPage": {
+      "adapter": {
+        "config": {
+          "groups": [
+            {
+              "id": "group_0",
+              "tiles": []
+            },
+            {
+              "id": "group_1",
+              "title": "Meeting Organizer",
+              "tiles": [
+                {
+                  "id": "tile_1_1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Find Available Rooms",
+                    "description": "Find Available Rooms",
+                    "targetURL": "#zavailroom-display"
+                  }
+                },
+                {
+                  "id": "tile_1_2",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "My Schedules",
+                    "description": "My Schedules",
+                    "targetURL": "#zmrbsschedule-manage"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group_2",
+              "title": "Meeting Invitee",
+              "tiles": [
+                {
+                  "id": "tile_2_1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "My Invitations",
+                    "description": "My Invitations",
+                    "targetURL": "#zinvitation-manage"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group_3",
+              "title": "Office Manager",
+              "tiles": [
+                {
+                  "id": "tile_3_1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "System Settings",
+                    "description": "Manage System Variables",
+                    "targetURL": "#zsysvarmanagement-manage"
+                  }
+                },
+                {
+                  "id": "tile_3_2",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Site Management",
+                    "description": "Manage Site Information",
+                    "targetURL": "#zsitemanage-manage"
+                  }
+                },
+                {
+                  "id": "tile_3_3",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Room Management",
+                    "description": "Manage Room Information",
+                    "targetURL": "#zroommanage-manage"
+                  }
+                },
+                {
+                  "id": "tile_3_4",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Equipment Type Management",
+                    "description": "Manage Equipment Type Information",
+                    "targetURL": "#zequimanage-manage"
+                  }
+                },
+                {
+                  "id": "tile_3_5",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Equipment Management",
+                    "description": "Manage Equipment Information",
+                    "targetURL": "#zrmequimanage-manage"
+                  }
+                },
+                {
+                  "id": "tile_3_6",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Schedule Management",
+                    "description": "Manage All Schedules",
+                    "targetURL": "#zschedulemanagement-manage"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group_4",
+              "title": "System Administrator",
+              "tiles": [
+                {
+                  "id": "tile_4_1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "User Management",
+                    "description": "User Management",
+                    "targetURL": "#zmrbsuser-manage"
+                  }
+                },
+                {
+                  "id": "tile_4_2",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Role Management",
+                    "description": "Role Management",
+                    "targetURL": "#zrolemanage-manage"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "NavTargetResolution": {
+      "config": {
+        "enableClientSideTargetResolution": true
+      }
+    },
+    "ClientSideTargetResolution": {
+      "adapter": {
+        "config": {
+          "inbounds": {
+            "zsitemanage-manage": {
+              "semanticObject": "zsitemanage",
+              "action": "manage",
+              "title": "Site Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zsitemanage",
+                "url": "./apps-build/OMApps/zsite_manage"
+              }
+            },
+            "zroommanage-manage": {
+              "semanticObject": "zroommanage",
+              "action": "manage",
+              "title": "Room Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zroommanage",
+                "url": "./apps-build/OMApps/zroom_manage"
+              }
+            },
+            "zequimanage-manage": {
+              "semanticObject": "zequimanage",
+              "action": "manage",
+              "title": "Equipment Type Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zequimanage",
+                "url": "./apps-build/OMApps/zequi_management"
+              }
+            },
+            "zrmequimanage-manage": {
+              "semanticObject": "zrmequimanage",
+              "action": "manage",
+              "title": "Equipment Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zrmequimanage",
+                "url": "./apps-build/OMApps/zrmequi_manage"
+              }
+            },
+            "zsysvarmanagement-manage": {
+              "semanticObject": "zsysvarmanagement",
+              "action": "manage",
+              "title": "System Settings",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zsysvarmanagement",
+                "url": "./apps-build/OMApps/zsysvar_management"
+              }
+            },
+            "zschedulemanagement-manage": {
+              "semanticObject": "zschedulemanagement",
+              "action": "manage",
+              "title": "System Settings",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zschedulemanagement",
+                "url": "./apps-build/OMApps/zschedulemanagement"
+              }
+            },
+            "zavailroom-display": {
+              "semanticObject": "zavailroom",
+              "action": "display",
+              "title": "Find Available Rooms",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zavailroom",
+                "url": "./apps-build/MOApps/zavail_room"
+              }
+            },
+            "zmrbsschedule-manage": {
+              "semanticObject": "zmrbsschedule",
+              "action": "manage",
+              "title": "My Schedules",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zmrbsschedule",
+                "url": "./apps-build/MOApps/zmrbs_schedule"
+              }
+            },
+            "zinvitation-manage": {
+              "semanticObject": "zinvitation",
+              "action": "manage",
+              "title": "My Invitations",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zinvitation",
+                "url": "./apps-build/InviteeApps/invitation"
+              }
+            },
+            "zmrbsuser-manage": {
+              "semanticObject": "zmrbsuser",
+              "action": "manage",
+              "title": "User Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zmrbsuser",
+                "url": "./apps-build/SysAdminApps/zmrbs_user"
+              }
+            },
+            "zrolemanage-manage": {
+              "semanticObject": "zrolemanage",
+              "action": "manage",
+              "title": "Role Management",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zrolemanage",
+                "url": "./apps-build/SysAdminApps/zrole_manage"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

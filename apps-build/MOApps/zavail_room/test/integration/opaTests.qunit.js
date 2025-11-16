@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zavailroom/test/integration/FirstJourney","zavailroom/test/integration/pages/ZC_TF_AVL_RMSList","zavailroom/test/integration/pages/ZC_TF_AVL_RMSObjectPage"],function(e,t,a,r){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zavailroom")+"/index.html"});e.run({pages:{onTheZC_TF_AVL_RMSList:a,onTheZC_TF_AVL_RMSObjectPage:r}},t.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

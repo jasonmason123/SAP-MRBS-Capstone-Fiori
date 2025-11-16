@@ -1,0 +1,226 @@
+{
+	"_version": "1.48.0",
+	"sap.app": {
+		"id": "zavailroom",
+		"type": "application",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			]
+		},
+		"applicationVersion": {
+			"version": "0.0.1"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "@sap/generator-fiori:lrop",
+			"version": "1.18.4",
+			"toolsId": "436783d9-d60e-4341-b2c8-33dda26e2380"
+		},
+		"dataSources": {
+			"annotation": {
+				"type": "ODataAnnotation",
+				"uri": "annotations/annotation.xml",
+				"settings": {
+					"localUri": "annotations/annotation.xml"
+				}
+			},
+			"mainService": {
+				"uri": "/sap/opu/odata4/sap/z_ui_o4_avail_room/srvd/sap/z_ui_avail_room/0001/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"annotation"
+					],
+					"localUri": "localService/mainService/metadata.xml",
+					"odataVersion": "4.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": true,
+		"dependencies": {
+			"minUI5Version": "1.108.33",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.fe.templates": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "zavailroom.i18n.i18n",
+					"supportedLocales": [
+						""
+					]
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"synchronizationMode": "None",
+					"operationMode": "Server",
+					"autoExpandSelect": true,
+					"earlyRequests": true
+				}
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties",
+				"settings": {
+					"supportedLocales": [
+						""
+					]
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {},
+			"routes": [
+				{
+					"pattern": ":?query:",
+					"name": "ZC_TF_AVL_RMSList",
+					"target": "ZC_TF_AVL_RMSList"
+				},
+				{
+					"pattern": "ZC_TF_AVL_RMS({key})/Set({key2}):?query:",
+					"name": "ZC_TF_AVL_RMSObjectPage",
+					"target": "ZC_TF_AVL_RMSObjectPage"
+				},
+				{
+					"pattern": "ZC_ROOM({key}):?query:",
+					"name": "ZC_ROOMObjectPage",
+					"target": "ZC_ROOMObjectPage"
+				},
+				{
+					"pattern": "ZC_SCHEDULE({key}):?query:",
+					"name": "ZC_SCHEDULEObjectPage",
+					"target": "ZC_SCHEDULEObjectPage"
+				}
+			],
+			"targets": {
+				"ZC_TF_AVL_RMSList": {
+					"type": "Component",
+					"id": "ZC_TF_AVL_RMSList",
+					"name": "sap.fe.templates.ListReport",
+					"options": {
+						"settings": {
+							"contextPath": "/ZC_TF_AVL_RMS/Set",
+							"variantManagement": "Page",
+							"navigation": {
+								"ZC_TF_AVL_RMS": {
+									"detail": {
+										"route": "ZC_ROOMObjectPage"
+									}
+								}
+							},
+							"controlConfiguration": {
+								"@com.sap.vocabularies.UI.v1.LineItem": {
+									"tableSettings": {
+										"type": "ResponsiveTable",
+										"showRowCount": true
+									}
+								}
+							}
+						}
+					}
+				},
+				"ZC_TF_AVL_RMSObjectPage": {
+					"type": "Component",
+					"id": "ZC_TF_AVL_RMSObjectPage",
+					"name": "sap.fe.templates.ObjectPage",
+					"options": {
+						"settings": {
+							"editableHeaderContent": false,
+							"contextPath": "/ZC_TF_AVL_RMS/Set",
+							"content": {
+								"footer": {
+									"actions": {
+										"BookRoom": {
+											"press": ".extension.zavailroom.ext.controller.ToBookRoom.onBookRoom",
+											"visible": true,
+											"enabled": true,
+											"text": "Book this Room"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"ZC_ROOMObjectPage": {
+					"type": "Component",
+					"id": "ZC_ROOMObjectPage",
+					"name": "sap.fe.templates.ObjectPage",
+					"options": {
+						"settings": {
+							"contextPath": "/ZC_ROOM"
+						}
+					}
+				},
+				"ZC_SCHEDULEObjectPage": {
+					"type": "Component",
+					"id": "ZC_SCHEDULEObjectPage",
+					"name": "sap.fe.templates.ObjectPage",
+					"options": {
+						"settings": {
+							"contextPath": "/ZC_SCHEDULE"
+						}
+					}
+				}
+			}
+		},
+		"extends": {
+			"extensions": {
+				"sap.ui.controllerExtensions": {
+					"sap.fe.templates.ObjectPage.ObjectPageController#zavailroom::ZC_TF_AVL_RMSObjectPage": {
+						"controllerName": "zavailroom.ext.controller.ToBookRoom",
+						"actions": {
+							"BookRoom": {
+								"press": "onBookRoom"
+							}
+						}
+					},
+					"sap.fe.templates.ObjectPage.ObjectPageController#zavailroom::ZC_SCHEDULEObjectPage": {
+						"controllerName": "zavailroom.ext.controller.CreateScheduleController"
+					}
+				}
+			}
+		},
+		"flexBundle": false
+	},
+	"sap.fiori": {
+		"registrationIds": [],
+		"archeType": "transactional"
+	}
+}

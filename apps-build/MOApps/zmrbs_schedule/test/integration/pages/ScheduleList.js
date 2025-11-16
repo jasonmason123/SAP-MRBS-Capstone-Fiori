@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zmrbsschedule",componentId:"ScheduleList",contextPath:"/Schedule"},t)});
+//# sourceMappingURL=ScheduleList.js.map

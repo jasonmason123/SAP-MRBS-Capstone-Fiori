@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","invitation/invitation/test/integration/pages/ZR_INVTList","invitation/invitation/test/integration/pages/ZR_INVTObjectPage"],function(t,i,e){"use strict";var n=new t({launchUrl:sap.ui.require.toUrl("invitation/invitation")+"/test/flp.html#app-preview",pages:{onTheZR_INVTList:i,onTheZR_INVTObjectPage:e},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

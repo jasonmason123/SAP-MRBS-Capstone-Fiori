@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zsitemanage",componentId:"ZR_SITEObjectPage",contextPath:"/ZR_SITE"},t)});
+//# sourceMappingURL=ZR_SITEObjectPage.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var n={actions:{},assertions:{}};return new t({appId:"zinvitation",componentId:"ZR_INVTList",contextPath:"/ZR_INVT"},n)});
+//# sourceMappingURL=ZR_INVTList.js.map

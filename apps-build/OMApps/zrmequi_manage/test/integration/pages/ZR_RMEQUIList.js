@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zrmequimanage",componentId:"ZR_RMEQUIList",contextPath:"/ZR_RMEQUI"},e)});
+//# sourceMappingURL=ZR_RMEQUIList.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","zsitemanage/test/integration/pages/ZR_SITEList","zsitemanage/test/integration/pages/ZR_SITEObjectPage"],function(e,t,a){"use strict";var n=new e({launchUrl:sap.ui.require.toUrl("zsitemanage")+"/test/flp.html#app-preview",pages:{onTheZR_SITEList:t,onTheZR_SITEObjectPage:a},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

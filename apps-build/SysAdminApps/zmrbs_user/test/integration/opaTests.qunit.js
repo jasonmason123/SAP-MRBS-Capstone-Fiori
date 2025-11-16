@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zdev/s35/zmrbsuser/test/integration/FirstJourney","zdev/s35/zmrbsuser/test/integration/pages/UserList","zdev/s35/zmrbsuser/test/integration/pages/UserObjectPage","zdev/s35/zmrbsuser/test/integration/pages/UserRoleObjectPage"],function(e,s,r,t,n){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zdev/s35/zmrbsuser")+"/index.html"});e.run({pages:{onTheUserList:r,onTheUserObjectPage:t,onTheUserRoleObjectPage:n}},s.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

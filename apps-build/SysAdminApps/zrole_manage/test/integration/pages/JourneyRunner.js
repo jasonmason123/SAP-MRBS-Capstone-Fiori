@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","zrolemanage/test/integration/pages/RoleList","zrolemanage/test/integration/pages/RoleObjectPage"],function(e,t,a){"use strict";var n=new e({launchUrl:sap.ui.require.toUrl("zrolemanage")+"/test/flp.html#app-preview",pages:{onTheRoleList:t,onTheRoleObjectPage:a},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

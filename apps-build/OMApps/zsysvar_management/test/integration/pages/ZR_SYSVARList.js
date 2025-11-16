@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zsysvarmanagement",componentId:"ZR_SYSVARList",contextPath:"/ZR_SYSVAR"},e)});
+//# sourceMappingURL=ZR_SYSVARList.js.map

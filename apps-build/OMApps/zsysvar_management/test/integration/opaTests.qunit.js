@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zsysvarmanagement/test/integration/FirstJourney","zsysvarmanagement/test/integration/pages/ZR_SYSVARList","zsysvarmanagement/test/integration/pages/ZR_SYSVARObjectPage"],function(e,t,n,a){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zsysvarmanagement")+"/index.html"});e.run({pages:{onTheZR_SYSVARList:n,onTheZR_SYSVARObjectPage:a}},t.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zavailroom",componentId:"ZC_TF_AVL_RMSObjectPage",contextPath:"/ZC_TF_AVL_RMS/Set"},t)});
+//# sourceMappingURL=ZC_TF_AVL_RMSObjectPage.js.map

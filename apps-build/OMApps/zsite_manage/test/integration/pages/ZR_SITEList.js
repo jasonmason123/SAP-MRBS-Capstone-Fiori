@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zsitemanage",componentId:"ZR_SITEList",contextPath:"/ZR_SITE"},e)});
+//# sourceMappingURL=ZR_SITEList.js.map

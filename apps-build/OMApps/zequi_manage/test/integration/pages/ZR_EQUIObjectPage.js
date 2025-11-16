@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zequimanage",componentId:"ZR_EQUIObjectPage",contextPath:"/ZR_EQUI"},t)});
+//# sourceMappingURL=ZR_EQUIObjectPage.js.map

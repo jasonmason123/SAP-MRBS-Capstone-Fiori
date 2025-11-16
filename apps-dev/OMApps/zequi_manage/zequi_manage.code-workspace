@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "zrmequi_manage",
+			"path": "../zrmequi_manage"
+		}
+	],
+	"settings": {}
+}

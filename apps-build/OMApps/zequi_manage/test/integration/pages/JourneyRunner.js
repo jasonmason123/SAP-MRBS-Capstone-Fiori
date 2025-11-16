@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/JourneyRunner","zequimanage/test/integration/pages/ZR_EQUIList","zequimanage/test/integration/pages/ZR_EQUIObjectPage"],function(e,t,a){"use strict";var n=new e({launchUrl:sap.ui.require.toUrl("zequimanage")+"/test/flp.html#app-preview",pages:{onTheZR_EQUIList:t,onTheZR_EQUIObjectPage:a},async:true});return n});
+//# sourceMappingURL=JourneyRunner.js.map

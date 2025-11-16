@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(s){"use strict";var t={actions:{},assertions:{}};return new s({appId:"zmrbsuser",componentId:"UserList",contextPath:"/User"},t)});
+//# sourceMappingURL=UserList.js.map
