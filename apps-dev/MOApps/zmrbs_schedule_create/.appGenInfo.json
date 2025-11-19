@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Nov 17 2025 11:18:41 GMT+0700 (Western Indonesia Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://s35.gb.ucc.cit.tum.de/sap/opu/odata4/sap/zmrbs_ui_o4_schedule/srvd/sap/zmrbs_ui_schedule/0001/",
+    "appName": "zmrbs_schedule_create",
+    "appTitle": "New Schedule",
+    "appDescription": "New Schedule",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.108.33",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.4",
+    "template": "Form Entry Object Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Schedule"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "None"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zmrbsschedulecreate/test/integration/FirstJourney","zmrbsschedulecreate/test/integration/pages/ScheduleObjectPage"],function(e,r,t){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zmrbsschedulecreate")+"/index.html"});e.run({pages:{onTheScheduleObjectPage:t}},r.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

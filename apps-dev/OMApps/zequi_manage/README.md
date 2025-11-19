@@ -9,7 +9,7 @@
 |**Service Type**<br>SAP System (ABAP On-Premise)|
 |**Service URL**<br>https://s35.gb.ucc.cit.tum.de/sap/opu/odata4/sap/zmrbs_ui_o4_equi/srvd/sap/zmrbs_ui_equi/0001/|
 |**Module Name**<br>zequi_manage|
-|**Application Title**<br>Equipments management|
+|**Application Title**<br>Equipment type management|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.108.33|
@@ -20,7 +20,7 @@
 
 ## zequi_manage
 
-Equipments management
+Equipment type management
 
 ### Starting the generated app
 

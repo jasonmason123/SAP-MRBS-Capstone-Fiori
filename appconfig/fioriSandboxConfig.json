@@ -1,10 +1,6 @@
 {
   "defaultRenderer": "fiori2",
   "bootstrapPlugins": {
-    "RuntimeAuthoringPlugin": {
-      "component": "sap.ushell.plugins.rta",
-      "config": { "validateAppVersion": false }
-    }
   },
   "renderers": {
     "fiori2": {
@@ -191,7 +187,7 @@
               "resolutionResult": {
                 "applicationType": "URL",
                 "additionalInformation": "SAPUI5.Component=zequimanage",
-                "url": "./apps-build/OMApps/zequi_management"
+                "url": "./apps-build/OMApps/zequi_manage"
               }
             },
             "zrmequimanage-manage": {
@@ -247,6 +243,27 @@
                 "applicationType": "URL",
                 "additionalInformation": "SAPUI5.Component=zmrbsschedule",
                 "url": "./apps-build/MOApps/zmrbs_schedule"
+              }
+            },
+            "zmrbsschedule-create": {
+              "semanticObject": "zmrbsschedulecreate",
+              "action": "create",
+              "title": "New Schedule",
+              "signature": {
+                "parameters": {
+                  "DateScheduled": {
+                    "required": false
+                  },
+                  "RoomId": {
+                    "required": false
+                  }
+                },
+                "additionalParameters": "allowed"
+              },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zmrbsschedulecreate",
+                "url": "./apps-build/MOApps/zmrbs_schedule_create"
               }
             },
             "zinvitation-manage": {

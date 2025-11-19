@@ -21,56 +21,18 @@ sap.ui.define(['sap/ui/core/mvc/ControllerExtension'], function (ControllerExten
 			const ctx = oAPI.getBindingContext();
 			const roomId = ctx.getProperty("RoomID");
 			const dateSche = ctx.getProperty("DateSche");
-			const oAppComponent = this.base.getView().getController().getAppComponent();
-			
-			//this.getOwnerComponent().getRouter().navTo("ZC_SCHEDULEObjectPage");
 
-			// console.log("Edit flow context 1", oAPI.getEditFlow());
-			// var document = oAPI.getEditFlow().createDocument(
-			// 	{ RoomId: roomId, DateScheduled: dateSche },
-			// 	{
-			// 		entitySet: "ZC_SCHEDULE",   // required in custom pages
-			// 		creationMode: "newPage"     // or "inline" / "inplace"
-			// 	}
-			// );
-			// console.log("Create document successful", document);
+			// sap.ushell.Container
+			const Navigation= await sap.ushell.Container.getServiceAsync("Navigation");
 
-			// const oNavService = oAppComponent.getNavigationService();
-
-			// oNavService.navigate(
-			// {
-			// 	target: "ZC_SCHEDULEObjectPage",    // <- defined in your manifest.json
-			// 	parameters: {
-			// 		preferredMode: "create"
-			// 	}
-			// });
-
-			const oModel = this.getView().getController().getModel();
-			console.log("Model:", oModel);
-			const oEditFlow = oAPI.getEditFlow();
-			console.log("Edit flow context:", oEditFlow);
-			const oNewContext = await oEditFlow.createDocument(
-				{
-						RoomID: roomId // Initial value for your foreign key
-				},
-				{
-						model: oModel,          // Must be passed because we’re in another entity’s Object Page
-						entitySet: "ZC_SCHEDULE"
+			// trigger navigation
+			Navigation.navigate({
+				target: { semanticObject: "zmrbsschedulecreate", action: "create" },
+				params: {
+					RoomId: roomId,
+					DateScheduled: dateSche
 				}
-			);
-
-			console.log("Draft created:", oNewContext);
-			console.log("OContext path:", oNewContext.getPath());
-
-			// var oRouting = oAPI.routing;
-			// oRouting.navigateToRoute("ZC_SCHEDULEObjectPage", {
-			// 	"key": "...",
-			// 	"?query": {
-			// 		"RoomId": roomId, 
-			// 		"DateScheduled": dateSche,
-			// 		"i-action": "create"
-			// 	}
-			// });
+			});
 		}
 	});
 });

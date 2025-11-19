@@ -197,9 +197,6 @@
                 "press": "onBookRoom"
               }
             }
-          },
-          "sap.fe.templates.ObjectPage.ObjectPageController#zavailroom::ZC_SCHEDULEObjectPage": {
-            "controllerName": "zavailroom.ext.controller.CreateScheduleController"
           }
         }
       }

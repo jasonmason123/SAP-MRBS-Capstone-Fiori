@@ -36,4 +36,4 @@ app.use('/test-resources/', proxy('sapui5.hana.ondemand.com/sdk/test-resources/'
   https: true
 }));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('SAP MRBS listening on port 3000!'))
