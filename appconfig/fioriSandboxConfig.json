@@ -117,6 +117,15 @@
                     "description": "Manage All Schedules",
                     "targetURL": "#zschedulemanagement-manage"
                   }
+                },
+                {
+                  "id": "tile_3_7",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Dashboard",
+                    "description": "Dashboard",
+                    "targetURL": "#alp-view"
+                  }
                 }
               ]
             },
@@ -221,6 +230,17 @@
                 "applicationType": "URL",
                 "additionalInformation": "SAPUI5.Component=zschedulemanagement",
                 "url": "./apps-build/OMApps/zschedulemanagement"
+              }
+            },
+            "alp-view": {
+              "semanticObject": "alp",
+              "action": "view",
+              "title": "Dashboard",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=alp",
+                "url": "./apps-build/OMApps/alp"
               }
             },
             "zavailroom-display": {

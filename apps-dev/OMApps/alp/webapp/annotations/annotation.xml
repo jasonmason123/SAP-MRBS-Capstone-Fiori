@@ -1,0 +1,306 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZMRBS_UI2_APL/$metadata">
+        <edmx:Include Namespace="cds_zmrbs_ui_apl"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType">
+            <Annotation Term="UI.Chart"> 
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection > 
+                                <PropertyPath >Room</PropertyPath>
+                            </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="Room"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue >
+                    <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterRoom"> 
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection > 
+                                <PropertyPath >Room</PropertyPath>
+                            </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="Room"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue >
+                    <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterDep">
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+                    <PropertyValue Property="Dimensions">
+                        <Collection>
+                            <PropertyPath>Department</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartDimensionAttributeType">
+                                <PropertyValue Property="Dimension" PropertyPath="Department"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterDep">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#visualFilterDep</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterSite">
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+                    <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>Site</PropertyPath>
+                            </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartDimensionAttributeType">
+                                <PropertyValue Property="Dimension" PropertyPath="Site"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="MeasureAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartMeasureAttributeType">
+                                <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>          
+            </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterBooker">
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                    <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>booker</PropertyPath>
+                            </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartDimensionAttributeType">
+                                <PropertyValue Property="Dimension" PropertyPath="booker"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="MeasureAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartMeasureAttributeType">
+                                <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>          
+            </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterMthYear">
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                    <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>monYr</PropertyPath>
+                            </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartDimensionAttributeType">
+                                <PropertyValue Property="Dimension" PropertyPath="monYr"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="MeasureAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartMeasureAttributeType">
+                                <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>          
+            </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterBooker">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                        <Collection>
+                            <AnnotationPath>@UI.Chart#visualFilterBooker</AnnotationPath>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterMthYear">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                        <Collection>
+                            <AnnotationPath>@UI.Chart#visualFilterMthYear</AnnotationPath>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterRoom">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                        <Collection>
+                            <AnnotationPath>@UI.Chart#visualFilterRoom</AnnotationPath>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Room">
+            <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterRoom"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="Room"/>
+                                <PropertyValue Property="ValueListProperty" String="Room"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Department">
+            <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterDep"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="Department"/>
+                                <PropertyValue Property="ValueListProperty" String="Department"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/booker">
+            <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterBooker"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="booker"/>
+                                <PropertyValue Property="ValueListProperty" String="booker"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/monYr">
+            <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterMthYear"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="monYr"/>
+                                <PropertyValue Property="ValueListProperty" String="monYr"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

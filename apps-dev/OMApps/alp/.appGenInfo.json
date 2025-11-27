@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Nov 13 2025 17:19:58 GMT+0700 (Indochina Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "OData URL",
+    "metadataFilename": "",
+    "serviceUrl": "https://s35lp1.ucc.cit.tum.de:8100/sap/opu/odata/sap/ZMRBS_UI2_APL",
+    "appName": "alp",
+    "appTitle": "App Title",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "alp",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.108.33",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.4",
+    "template": "Analytical List Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "BookingAnalysisSet"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
