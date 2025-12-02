@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zslotconfig",componentId:"ZR_SLOTObjectPage",contextPath:"/ZR_SLOT"},e)});
+//# sourceMappingURL=ZR_SLOTObjectPage.js.map

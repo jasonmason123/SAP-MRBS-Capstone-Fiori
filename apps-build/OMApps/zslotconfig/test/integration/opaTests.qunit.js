@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zslotconfig/test/integration/FirstJourney","zslotconfig/test/integration/pages/ZR_SLOTList","zslotconfig/test/integration/pages/ZR_SLOTObjectPage"],function(t,e,n,i){"use strict";var t=new t({launchUrl:sap.ui.require.toUrl("zslotconfig")+"/index.html"});t.run({pages:{onTheZR_SLOTList:n,onTheZR_SLOTObjectPage:i}},e.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

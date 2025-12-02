@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var s={actions:{},assertions:{}};return new t({appId:"zslotconfig",componentId:"ZR_SLOTList",contextPath:"/ZR_SLOT"},s)});
+//# sourceMappingURL=ZR_SLOTList.js.map

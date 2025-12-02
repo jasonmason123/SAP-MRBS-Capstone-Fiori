@@ -126,6 +126,15 @@
                     "description": "Dashboard",
                     "targetURL": "#alp-view"
                   }
+                },
+                {
+                  "id": "tile_3_8",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Slot Settings",
+                    "description": "Slot Settings",
+                    "targetURL": "#zslotconfig-manage"
+                  }
                 }
               ]
             },
@@ -219,6 +228,17 @@
                 "applicationType": "URL",
                 "additionalInformation": "SAPUI5.Component=zsysvarmanagement",
                 "url": "./apps-build/OMApps/zsysvar_management"
+              }
+            },
+            "zslotconfig-manage": {
+              "semanticObject": "zslotconfig",
+              "action": "manage",
+              "title": "Slot Settings",
+              "signature": { "parameters": {}, "additionalParameters": "allowed" },
+              "resolutionResult": {
+                "applicationType": "URL",
+                "additionalInformation": "SAPUI5.Component=zslotconfig",
+                "url": "./apps-build/OMApps/zslotconfig"
               }
             },
             "zschedulemanagement-manage": {

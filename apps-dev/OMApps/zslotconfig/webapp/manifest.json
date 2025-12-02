@@ -1,7 +1,7 @@
 {
   "_version": "1.48.0",
   "sap.app": {
-    "id": "zschedulemanagement",
+    "id": "zslotconfig",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.18.4",
-      "toolsId": "b6dbe6bc-a265-4aa5-b6c8-4cb8435d36e9"
+      "toolsId": "01c32bb0-35be-419d-9d78-fa6db466380d"
     },
     "dataSources": {
       "annotation": {
@@ -24,7 +24,7 @@
         }
       },
       "mainService": {
-        "uri": "/sap/opu/odata4/sap/zmrbs_ui_o4_sched_om/srvd/sap/zmrbs_ui_sched_om/0001/",
+        "uri": "/sap/opu/odata4/sap/zmrbs_ui_o4_slot/srvd/sap/zmrbs_ui_slot/0001/",
         "type": "OData",
         "settings": {
           "annotations": [
@@ -70,7 +70,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "zschedulemanagement.i18n.i18n"
+          "bundleName": "zslotconfig.i18n.i18n"
         }
       },
       "": {
@@ -96,71 +96,49 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "ZMRBS_C_SCH_OMList",
-          "target": "ZMRBS_C_SCH_OMList"
+          "name": "ZR_SLOTList",
+          "target": "ZR_SLOTList"
         },
         {
-          "pattern": "ZMRBS_C_SCH_OM({key}):?query:",
-          "name": "ZMRBS_C_SCH_OMObjectPage",
-          "target": "ZMRBS_C_SCH_OMObjectPage"
+          "pattern": "ZR_SLOT({key}):?query:",
+          "name": "ZR_SLOTObjectPage",
+          "target": "ZR_SLOTObjectPage"
         }
       ],
       "targets": {
-        "ZMRBS_C_SCH_OMList": {
+        "ZR_SLOTList": {
           "type": "Component",
-          "id": "ZMRBS_C_SCH_OMList",
+          "id": "ZR_SLOTList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/ZMRBS_C_SCH_OM",
+              "contextPath": "/ZR_SLOT",
               "variantManagement": "Page",
               "navigation": {
-                "ZMRBS_C_SCH_OM": {
+                "ZR_SLOT": {
                   "detail": {
-                    "route": "ZMRBS_C_SCH_OMObjectPage"
+                    "route": "ZR_SLOTObjectPage"
                   }
                 }
               },
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable",
-                    "quickVariantSelection": {
-                      "paths": [
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#All"
-                        },
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Today"
-                        },
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Approved"
-                        },
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Waiting"
-                        },
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Finished"
-                        },
-                        {
-                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Rejected"
-                        }
-                      ]
-                    }
+                    "type": "ResponsiveTable"
                   }
                 }
               }
             }
           }
         },
-        "ZMRBS_C_SCH_OMObjectPage": {
+        "ZR_SLOTObjectPage": {
           "type": "Component",
-          "id": "ZMRBS_C_SCH_OMObjectPage",
+          "id": "ZR_SLOTObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/ZMRBS_C_SCH_OM"
+              "contextPath": "/ZR_SLOT"
             }
           }
         }
