@@ -137,7 +137,29 @@
 							"controlConfiguration": {
 								"@com.sap.vocabularies.UI.v1.LineItem": {
 									"tableSettings": {
-										"type": "ResponsiveTable"
+										"type": "ResponsiveTable",
+										"quickVariantSelection": {
+											"paths": [
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#All"
+												},
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Today"
+												},
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Accepted"
+												},
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Waiting"
+												},
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Finished"
+												},
+												{
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Rejected"
+												}
+											]
+										}
 									}
 								}
 							}

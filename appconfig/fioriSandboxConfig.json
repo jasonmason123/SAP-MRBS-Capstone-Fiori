@@ -104,8 +104,8 @@
                   "id": "tile_3_5",
                   "tileType": "sap.ushell.ui.tile.StaticTile",
                   "properties": {
-                    "title": "Equipment Management",
-                    "description": "Manage Equipment Information",
+                    "title": "Room Equipment Management",
+                    "description": "Manage Room Equipment Information",
                     "targetURL": "#zrmequimanage-manage"
                   }
                 },
