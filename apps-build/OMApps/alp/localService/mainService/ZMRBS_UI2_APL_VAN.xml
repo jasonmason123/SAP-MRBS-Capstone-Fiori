@@ -33,7 +33,7 @@
                 <Annotation Term="UI.Chart" Qualifier="visualDate">
                     <Record Type="UI.ChartDefinitionType">
                         <PropertyValue Property="Description" String="Booking Data"/>
-                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
                         <PropertyValue Property="Dimensions">
                             <Collection>
                                 <PropertyPath>monYr</PropertyPath>
@@ -43,7 +43,7 @@
                             <Collection>
                                 <Record Type="UI.ChartDimensionAttributeType">
                                     <PropertyValue Property="Dimension" PropertyPath="monYr"/>
-                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Series"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -129,14 +129,6 @@
                                     <PropertyValue Property="Label" String="Booker Email"/>
                                     <PropertyValue Property="Value" Path="Email"/>
                                 </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="Booker Roll"/>
-                                    <PropertyValue Property="Value" Path="Roll"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="Booker Department"/>
-                                    <PropertyValue Property="Value" Path="Department"/>
-                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -208,16 +200,13 @@
                             <PropertyValue Property="Value" Path="date_scheduled"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="monYr"/>
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="booker"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Title"/>
+                            <PropertyValue Property="Value" Path="Name"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Name"/>
+                            <PropertyValue Property="Value" Path="Title"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Site"/>
@@ -227,10 +216,11 @@
                         </Record>
                     </Collection>
                 </Annotation>
-                <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterDate">
+                <Annotation Term="UI.PresentationVariant" Qualifier="visualDate">
                     <Record>
                         <PropertyValue Property="Visualizations">
                             <Collection>
+                                <AnnotationPath>@UI.DataPoint#Duration</AnnotationPath>
                                 <AnnotationPath>@UI.Chart#visualDate</AnnotationPath>
                             </Collection>
                         </PropertyValue>
@@ -252,6 +242,18 @@
                         <PropertyPath>monYr</PropertyPath>
                         <PropertyPath>Site</PropertyPath>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="visualDate">
+                    <Record>
+                        <PropertyValue Property="Text" String=""/>
+                        <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#visualDate"/>
+                        <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#visualDate"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="visualDate">
+                    <Record>
+                        <PropertyValue Property="Text" String=""/>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>
