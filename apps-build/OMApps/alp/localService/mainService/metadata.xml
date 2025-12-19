@@ -49,43 +49,21 @@
                 </Key>
                 <Property Name="ID" Type="Edm.String" Nullable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Booking" Type="Edm.Guid" sap:aggregation-role="dimension" sap:label="Schedule ID"/>
-                <Property Name="Room" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Room ID" sap:value-list="standard"/>
-                <Property Name="date_scheduled" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:label="Date scheduled"/>
+                <Property Name="Room" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Room ID"/>
+                <Property Name="date_scheduled" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:label="Date"/>
                 <Property Name="Title" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Title" sap:quickinfo="Schedule or Meeting title"/>
                 <Property Name="Start_Time" Type="Edm.Time" Precision="0" sap:aggregation-role="dimension" sap:label="Schedule time start"/>
                 <Property Name="End_Time" Type="Edm.Time" Precision="0" sap:aggregation-role="dimension" sap:label="Schedule time to"/>
-                <Property Name="booker" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="User" sap:quickinfo="User Name in User Master Record" sap:value-list="standard"/>
+                <Property Name="booker" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="User" sap:quickinfo="User Name in User Master Record"/>
                 <Property Name="Name" Type="Edm.String" MaxLength="80" sap:aggregation-role="dimension" sap:label="Full Name" sap:quickinfo="Full Name of Person"/>
                 <Property Name="Email" Type="Edm.String" MaxLength="241" sap:aggregation-role="dimension" sap:label="E-Mail Address"/>
-                <Property Name="Site" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Site ID" sap:value-list="standard"/>
+                <Property Name="Roll" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Job Title" sap:quickinfo="Job title"/>
+                <Property Name="Department" Type="Edm.String" MaxLength="60" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Department"/>
+                <Property Name="Site" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Site ID"/>
                 <Property Name="Room_Name" Type="Edm.String" MaxLength="100" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Room name" sap:quickinfo="Room name or room code"/>
                 <Property Name="Location" Type="Edm.String" MaxLength="200" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Rm. location desc." sap:quickinfo="Room location description"/>
-                <Property Name="Duration" Type="Edm.Double" sap:aggregation-role="measure" sap:label="Duration" sap:filterable="false"/>
+                <Property Name="Duration" Type="Edm.Decimal" Precision="15" Scale="0" sap:aggregation-role="measure" sap:label="Duration" sap:filterable="false"/>
                 <Property Name="monYr" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="Month Year"/>
-            </EntityType>
-            <EntityType Name="ZMRBS_SH_ROOMType" sap:label="Search help for room" sap:value-list="true" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="RoomID"/>
-                </Key>
-                <Property Name="RoomID" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Room ID"/>
-                <Property Name="RoomName" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Room name" sap:quickinfo="Room name or room code"/>
-                <Property Name="SiteId" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Site ID"/>
-                <Property Name="SiteName" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Site name"/>
-            </EntityType>
-            <EntityType Name="ZMRBS_SH_SITEType" sap:label="Search help for site" sap:value-list="true" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="SiteID"/>
-                </Key>
-                <Property Name="SiteID" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Site ID"/>
-                <Property Name="SiteName" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Site name"/>
-                <Property Name="Address" Type="Edm.String" MaxLength="200" sap:display-format="UpperCase" sap:label="Site address"/>
-                <Property Name="Manager" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User" sap:quickinfo="User Name in User Master Record"/>
-            </EntityType>
-            <EntityType Name="ZMRBS_SH_USERType" sap:label="Search help for username" sap:value-list="true" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Username"/>
-                </Key>
-                <Property Name="Username" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="User" sap:quickinfo="User Name in User Master Record"/>
             </EntityType>
             <EntityType Name="SAP__Currency" sap:content-version="1">
                 <Key>
@@ -253,9 +231,6 @@
                 <EntitySet Name="SAP__SignatureSet" EntityType="cds_zmrbs_ui_apl.SAP__Signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="SAP__ValueHelpSet" EntityType="cds_zmrbs_ui_apl.SAP__ValueHelp" sap:content-version="1"/>
                 <EntitySet Name="BookingAnalysisSet" EntityType="cds_zmrbs_ui_apl.BookingAnalysisSetType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
-                <EntitySet Name="ZMRBS_SH_ROOM" EntityType="cds_zmrbs_ui_apl.ZMRBS_SH_ROOMType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
-                <EntitySet Name="ZMRBS_SH_SITE" EntityType="cds_zmrbs_ui_apl.ZMRBS_SH_SITEType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
-                <EntitySet Name="ZMRBS_SH_USER" EntityType="cds_zmrbs_ui_apl.ZMRBS_SH_USERType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="SAP__Currencies" EntityType="cds_zmrbs_ui_apl.SAP__Currency" sap:content-version="1"/>
                 <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zmrbs_ui_apl.SAP__UnitOfMeasure" sap:content-version="1"/>
                 <EntitySet Name="SAP__MyDocumentDescriptions" EntityType="cds_zmrbs_ui_apl.SAP__DocumentDescription" sap:content-version="1"/>
@@ -280,75 +255,6 @@
                     <End EntitySet="SAP__CoverPageSet" Role="ToRole_to_coverpage"/>
                 </AssociationSet>
             </EntityContainer>
-            <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Room" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Room ID"/>
-                        <PropertyValue Property="CollectionPath" String="ZMRBS_SH_ROOM"/>
-                        <PropertyValue Property="SearchSupported" Bool="false"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Room"/>
-                                    <PropertyValue Property="ValueListProperty" String="RoomID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="RoomName"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="SiteId"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="SiteName"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/booker" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="User"/>
-                        <PropertyValue Property="CollectionPath" String="ZMRBS_SH_USER"/>
-                        <PropertyValue Property="SearchSupported" Bool="false"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="booker"/>
-                                    <PropertyValue Property="ValueListProperty" String="Username"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Site" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Site ID"/>
-                        <PropertyValue Property="CollectionPath" String="ZMRBS_SH_SITE"/>
-                        <PropertyValue Property="SearchSupported" Bool="false"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Site"/>
-                                    <PropertyValue Property="ValueListProperty" String="SiteID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="SiteName"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Address"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Manager"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
             <Annotations Target="cds_zmrbs_ui_apl.cds_zmrbs_ui_apl_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
             </Annotations>

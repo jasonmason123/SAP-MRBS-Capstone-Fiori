@@ -116,6 +116,46 @@
                         </PropertyValue>
                 </Record>
             </Annotation>
+            <Annotation Term="UI.Chart" Qualifier="visualFilterDate">
+                <Record Type="UI.ChartDefinitionType">
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+                    <PropertyValue Property="Dimensions">
+                        <Collection>
+                            <PropertyPath>date_scheduled</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="DimensionAttributes">
+                        <Collection>
+                            <Record Type="UI.ChartDimensionAttributeType">
+                                <PropertyValue Property="Dimension" PropertyPath="date_scheduled"/>
+                                <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="Measures">
+                        <Collection>
+                            <PropertyPath>Duration</PropertyPath>
+                        </Collection>
+                    </PropertyValue>
+                    <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Duration"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterDate">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#visualFilterDate</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                </Record>
+            </Annotation>
             <Annotation Term="UI.Chart" Qualifier="visualFilterSite">
                 <Record Type="UI.ChartDefinitionType">
                     <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
@@ -180,7 +220,7 @@
             </Annotation>
             <Annotation Term="UI.Chart" Qualifier="visualFilterMthYear">
                 <Record Type="UI.ChartDefinitionType">
-                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                    <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
                     <PropertyValue Property="Dimensions">
                             <Collection>
                                 <PropertyPath>monYr</PropertyPath>
@@ -227,6 +267,15 @@
                     </PropertyValue>
                 </Record>
             </Annotation>
+            <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterSite">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                        <Collection>
+                            <AnnotationPath>@UI.Chart#visualFilterSite</AnnotationPath>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
             <Annotation Term="UI.PresentationVariant" Qualifier="visualPresentFilterRoom">
                 <Record Type="UI.PresentationVariantType">
                     <PropertyValue Property="Visualizations">
@@ -237,16 +286,54 @@
                 </Record>
             </Annotation>
         </Annotations>
-        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Room">
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/booker">
             <Annotation Term="Common.ValueList">
                 <Record Type="Common.ValueListType">
-                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
-                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterRoom"/>
+                    <PropertyValue Property="CollectionPath"
+                                String="BookingAnalysisSet"/>
                     <PropertyValue Property="Parameters">
                         <Collection>
                             <Record Type="Common.ValueListParameterInOut">
-                                <PropertyValue Property="LocalDataProperty" PropertyPath="Room"/>
-                                <PropertyValue Property="ValueListProperty" String="Room"/>
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="booker"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="booker"/>            
+                            </Record>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="Name"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="Name"/>          
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="Common.ValueList" Qualifier="visualFilterBooker">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterBooker"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="booker"/>
+                                <PropertyValue Property="ValueListProperty" String="booker"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/date_scheduled">
+            <Annotation Term="Common.ValueList" Qualifier="VisualFilterDate">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterDate"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="date_scheduled"/>
+                                <PropertyValue Property="ValueListProperty" String="date_scheduled"/>
                             </Record>
                         </Collection>
                     </PropertyValue>
@@ -269,16 +356,76 @@
                 </Record>
             </Annotation>
         </Annotations>
-        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/booker">
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Site">
             <Annotation Term="Common.ValueList">
                 <Record Type="Common.ValueListType">
-                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
-                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterBooker"/>
+                    <PropertyValue Property="CollectionPath"
+                                String="BookingAnalysisSet"/>
                     <PropertyValue Property="Parameters">
                         <Collection>
                             <Record Type="Common.ValueListParameterInOut">
-                                <PropertyValue Property="LocalDataProperty" PropertyPath="booker"/>
-                                <PropertyValue Property="ValueListProperty" String="booker"/>
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="Site"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="Site"/>            
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="Common.ValueList" Qualifier="visualFilterSite">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterSite"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="Site"/>
+                                <PropertyValue Property="ValueListProperty" String="Site"/>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+        </Annotations>
+        <Annotations Target="cds_zmrbs_ui_apl.BookingAnalysisSetType/Room">
+            <Annotation Term="Common.ValueList">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath"
+                                String="BookingAnalysisSet"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="Room"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="Room"/>            
+                            </Record>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="Room_Name"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="Room_Name"/>            
+                            </Record>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty"
+                                            PropertyPath="Location"/>
+                                <PropertyValue Property="ValueListProperty"
+                                            String="Location"/>            
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </Annotation>
+            <Annotation Term="Common.ValueList" Qualifier="visualFilterRoom">
+                <Record Type="Common.ValueListType">
+                    <PropertyValue Property="CollectionPath" String="BookingAnalysisSet"/>
+                    <PropertyValue Property="PresentationVariantQualifier" String="visualPresentFilterRoom"/>
+                    <PropertyValue Property="Parameters">
+                        <Collection>
+                            <Record Type="Common.ValueListParameterInOut">
+                                <PropertyValue Property="LocalDataProperty" PropertyPath="Room"/>
+                                <PropertyValue Property="ValueListProperty" String="Room"/>
                             </Record>
                         </Collection>
                     </PropertyValue>
